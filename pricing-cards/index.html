@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Pingwell Pricing</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Familjen+Grotesk:wght@500;600;700&family=Instrument+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="wrap">
+    <header class="intro">
+      <p class="eyebrow">Pingwell · uptime monitoring</p>
+      <h1>Pricing that scales with your checks</h1>
+      <p class="lede">Every plan includes alerts by email and Slack. Change plans or cancel any time.</p>
+
+      <div class="billing">
+        <span class="billing-label" id="label-monthly" data-cycle="monthly">Monthly</span>
+        <button type="button" class="switch" id="billing-switch" role="switch" aria-checked="false" aria-label="Bill yearly">
+          <span class="knob"></span>
+        </button>
+        <span class="billing-label" id="label-yearly" data-cycle="yearly">Yearly</span>
+        <span class="save-chip" id="save-chip">2 months free</span>
+      </div>
+    </header>
+
+    <section class="plans" aria-label="Plans">
+
+      <article class="card" data-monthly="12" data-yearly="10" data-yearly-total="120">
+        <h2>Starter</h2>
+        <p class="blurb">For side projects and small sites.</p>
+        <p class="price" aria-live="polite">
+          <span class="currency">$</span><span class="amount">12</span><span class="per">/ month</span>
+        </p>
+        <p class="billed">Billed monthly</p>
+        <a class="cta" href="#" data-plan="Starter">Start free trial</a>
+        <ul class="features">
+          <li>20 monitors</li>
+          <li>3-minute check interval</li>
+          <li>1 status page</li>
+          <li>30-day incident history</li>
+        </ul>
+      </article>
+
+      <article class="card featured" data-monthly="29" data-yearly="24" data-yearly-total="290">
+        <span class="ribbon ribbon-popular">Popular</span>
+        <h2>Pro</h2>
+        <p class="blurb">For teams who need faster checks.</p>
+        <p class="price" aria-live="polite">
+          <span class="currency">$</span><span class="amount">29</span><span class="per">/ month</span>
+        </p>
+        <p class="billed">Billed monthly</p>
+        <a class="cta" href="#" data-plan="Pro">Start free trial</a>
+        <ul class="features">
+          <li>100 monitors</li>
+          <li>1-minute check interval</li>
+          <li>5 status pages with custom domain</li>
+          <li>1-year incident history</li>
+          <li>Phone call and SMS alerts</li>
+        </ul>
+      </article>
+
+      <article class="card" data-monthly="79" data-yearly="66" data-yearly-total="790">
+        <span class="ribbon ribbon-best">Best Value</span>
+        <h2>Scale</h2>
+        <p class="blurb">For companies running many services.</p>
+        <p class="price" aria-live="polite">
+          <span class="currency">$</span><span class="amount">79</span><span class="per">/ month</span>
+        </p>
+        <p class="billed">Billed monthly</p>
+        <a class="cta" href="#" data-plan="Scale">Start free trial</a>
+        <ul class="features">
+          <li>500 monitors</li>
+          <li>30-second check interval</li>
+          <li>Unlimited status pages</li>
+          <li>Unlimited incident history</li>
+          <li>SSO and audit log</li>
+          <li>Priority support, 1-hour response</li>
+        </ul>
+      </article>
+
+    </section>
+
+    <p class="foot">Prices in USD. Yearly billing is charged once per year.</p>
+    <p class="toast" id="toast" role="status" hidden></p>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
